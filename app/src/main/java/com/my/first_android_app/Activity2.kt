@@ -20,7 +20,7 @@ class Activity2 : AppCompatActivity() {
         titleTextView = findViewById(R.id.textView)
         subtitleTextView = findViewById(R.id.textView2)
 
-        titleTextView.text = intent.getStringExtra("successMessage")
-        subtitleTextView.text = "Halo, " + sharedPref.getString("username", "TANPA NAMA")
+        titleTextView.text = intent.getStringExtra("greetingMessage")
+        subtitleTextView.text = "Halo, " + sharedPref.getString("username", "")
     }
 }
