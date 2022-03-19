@@ -1,4 +1,4 @@
-package com.my.first_android_app
+package com.my.first_android_app.API
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

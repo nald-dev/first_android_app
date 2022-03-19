@@ -1,4 +1,4 @@
-package com.my.first_android_app
+package com.my.first_android_app.API
 
 data class LoginDataModel(val id:Int, val username:String)
 

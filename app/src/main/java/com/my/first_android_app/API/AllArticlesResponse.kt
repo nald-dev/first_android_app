@@ -1,4 +1,4 @@
-package com.my.first_android_app
+package com.my.first_android_app.API
 
 data class AllArticlesResponse (
     val id: Int,
