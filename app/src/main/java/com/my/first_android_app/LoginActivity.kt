@@ -44,10 +44,8 @@ class LoginActivity : AppCompatActivity()  {
 
         Picasso
             .get()
-            .load("https://i.imgur.com/DvpvklR.png")
+            .load("https://picsum.photos/300")
             .into(imageView)
-
-        val loginMessage = "Successfully login"
 
         val thisInstance = this
 
@@ -70,7 +68,7 @@ class LoginActivity : AppCompatActivity()  {
                             .commit();
 
                         val intent = Intent(thisInstance, HomeActivity::class.java)
-                            .putExtra("greetingMessage", "Welcome")
+                            // .putExtra("greetingMessage", "Welcome") // To send parameter to new activity
 
                         startActivity(intent)
 

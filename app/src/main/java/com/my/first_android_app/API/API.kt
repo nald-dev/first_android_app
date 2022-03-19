@@ -15,5 +15,5 @@ interface API {
     ): Call<LoginResponse>
 
     @GET("/get-all-articles")
-    fun getAllArticles(): Call<ArrayList<AllArticlesResponse>>
+    fun getAllArticles(): Call<AllArticlesResponse>
 }
