@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity()  {
                 .putExtra("successMessage", "Successfully login")
 
             // Add flags to replace activity
-            // intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            // intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
 
             startActivity(intent)
         }
