@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity()  {
         Picasso.get().load("https://i.imgur.com/DvpvklR.png").into(imageView)
 
         button.setOnClickListener {
-            val intent = Intent(this, Activity2::class.java)
+            val intent = Intent(this, Activity2::class.java).putExtra("example_parameter", "Hey this is parameter from activity 1")
             startActivity(intent)
         }
     }
