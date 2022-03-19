@@ -13,6 +13,6 @@ class Activity2 : AppCompatActivity() {
 
         textView = findViewById(R.id.textView)
 
-        textView.text = intent.getStringExtra("example_parameter")
+        textView.text = intent.getStringExtra("username") + intent.getStringExtra("password")
     }
 }
