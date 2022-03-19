@@ -1,6 +1,7 @@
 package com.my.first_android_app
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity()  {
+    private lateinit var sharedPref: SharedPreferences
+
     private lateinit var imageView: ImageView
     private lateinit var button: Button
 
@@ -20,6 +23,8 @@ class MainActivity : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        sharedPref = getSharedPreferences("myPreferences", MODE_PRIVATE)
 
         imageView = findViewById<ImageView>(R.id.imageView)
         button = findViewById<Button>(R.id.button)
@@ -35,9 +40,10 @@ class MainActivity : AppCompatActivity()  {
             .into(imageView)
 
         button.setOnClickListener {
+            sharedPref.edit().putString("username", usernameEditText.text.toString()).commit();
+
             val intent = Intent(this, Activity2::class.java)
-                .putExtra("username", usernameEditText.text.toString())
-                .putExtra("password", passwordEditText.text.toString())
+                .putExtra("successMessage", "Successfully login")
 
             startActivity(intent)
         }
