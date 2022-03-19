@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity()  {
             startActivity(intent)
 
             // To end current activity, optional if you want to
-            // finishAffinity()
+            // finish()
         }
     }
 }
